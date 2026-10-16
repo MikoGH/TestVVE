@@ -51,7 +51,7 @@ public class RabbitMqService : IAsyncDisposable
                 basicProperties: props,
                 body: body);
 
-            _logger.LogInformation("Message sended successfully.");
+            _logger.LogInformation("Message sent successfully.");
         }
         catch (Exception ex)
         {

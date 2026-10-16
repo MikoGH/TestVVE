@@ -67,7 +67,7 @@ app.MapPut("/tasks/{id}/complete", async (Guid id, TaskDbContext context, Rabbit
     }
     catch (DbUpdateConcurrencyException)
     {
-        return Results.Conflict(new { message = "Concurrency conflict." });
+        return Results.Conflict("Concurrency conflict.");
     }
 
     var taskItemMessage = new TaskItemMessage

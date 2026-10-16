@@ -1,4 +1,6 @@
-﻿namespace TestVVE;
+﻿using System.Text.Json.Serialization;
+
+namespace TestVVE;
 
 public class TaskItemMessage
 {
@@ -8,5 +10,6 @@ public class TaskItemMessage
 
     public DateTimeOffset? CompletedAt { get; set; }
 
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public Priority Priority { get; set; }
 }
